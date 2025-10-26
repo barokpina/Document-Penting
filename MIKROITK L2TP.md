@@ -11,7 +11,7 @@ SETTING SISI CLIENT
 
 
 2. SETTING AGAR BISA TERHUBUNG KE SERVER CHR 
-- TAMBAHKAN L2TP CLIENT DI TAB PPP (
+   - TAMBAHKAN L2TP CLIENT DI TAB PPP (
         + Klik menu PPP
         + Klik tab Interface
         + Klik tombol + → pilih L2TP Client
