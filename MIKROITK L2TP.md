@@ -34,7 +34,7 @@ SETTING SISI CLIENT
         + Klik OK
     
   -  Firewall Allow L2TP/IPsec
-        # Rule 1: Allow UDP Port L2TP/IPsec
+        Rule 1: Allow UDP Port L2TP/IPsec
         + Klik menu IP → Firewall
         + Klik tab Filter Rules
         + Klik tombol +
@@ -48,7 +48,7 @@ SETTING SISI CLIENT
         + Comment: Allow L2TP/IPsec
         + Klik OK
           
-        # Rule 2: Allow IPsec ESP Protocol
+        Rule 2: Allow IPsec ESP Protocol
         + Klik tombol +
         + Tab General:
         + Chain: input
