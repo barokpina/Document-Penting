@@ -25,7 +25,7 @@ SETTING SISI CLIENT
         + IPsec Secret: 1125toki (harus sama dengan server)
         + Add Default Route: no (jangan centang)
   )
-  - Enable Logging (untuk troubleshooting)
+   - Enable Logging (untuk troubleshooting)
         + Klik menu System → Logging
         + Klik tombol +
         + Isi:
@@ -33,7 +33,7 @@ SETTING SISI CLIENT
         + Action: memory
         + Klik OK
     
-  -  Firewall Allow L2TP/IPsec
+   - Firewall Allow L2TP/IPsec
         Rule 1: Allow UDP Port L2TP/IPsec
         + Klik menu IP → Firewall
         + Klik tab Filter Rules
@@ -47,7 +47,7 @@ SETTING SISI CLIENT
         + Tab Comment:
         + Comment: Allow L2TP/IPsec
         + Klik OK
-          
+    
         Rule 2: Allow IPsec ESP Protocol
         + Klik tombol +
         + Tab General:
