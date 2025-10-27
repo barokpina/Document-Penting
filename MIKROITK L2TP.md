@@ -14,16 +14,8 @@ B. SETTING AGAR BISA TERHUBUNG KE SERVER CHR
      
    2. Enable Logging (untuk troubleshooting) : Klik menu System → Logging Klik tombol → Isi: Topics: centang l2tp, ipsec, ppp, infoAction: memory Klik OK
     
-   3. Firewall Allow L2TP/IPsec → Rule 1: Allow UDP Port L2TP/IPsec Klik menu IP → Firewall Klik tab Filter Rules Klik tombol → Tab General: Chain: input Protocol: udp Dst. Port: 500,4500,1701 Tab Action: Action: accept Tab Comment: Comment: Allow L2TP/IPsec Klik OK
+   3. Firewall Allow L2TP/IPsec →
+      Rule 1: Allow UDP Port L2TP/IPsec Klik menu IP → Firewall Klik tab Filter Rules Klik tombol → Tab General: Chain: input Protocol: udp Dst. Port: 500,4500,1701 Tab Action: Action: accept Tab Comment: Comment: Allow L2TP/IPsec Klik OK
     
-        Rule 2: Allow IPsec ESP Protocol
-        + Klik tombol +
-        + Tab General:
-        + Chain: input
-        + Protocol: ipsec-esp
-        + Tab Action:
-        + Action: accept
-        + Tab Comment:
-        + Comment: Allow IPsec ESP
-        + Klik OK
+        Rule 2: Allow IPsec ESP Protocol Klik tombol → Tab General: Chain: input Protocol: ipsec-esp → Tab Action: → Action: accept Tab Comment: Comment: Allow IPsec Klik OK
 
