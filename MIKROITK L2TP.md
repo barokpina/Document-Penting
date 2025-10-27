@@ -1,13 +1,13 @@
 SETTING SISI CLIENT 
 A. SETTING AGAR BISA INTERNET DAN DI BRIGDE LAN NYA
-        1. buatkan bridge lan 2 sampai 4 gabungkan (klik menu bridge → klik tab bridge → klik tombol + → name: bridge-lan → masukkan ether2 ke bridge → klik tab ports → interface: ether2 → bridge: bridge-lan)
-        2. tambahkan ip - dhcp client - pastikan bound
-        2. tambahkan ip address 192.168.20.1/24 di interfaces bridge-lan
-        3. tambahkan ip pool name: dhcp-pool-lanaddresses: 192.168.20.100-192.168.20.200
-        4. tambahkan dhcp server klik tab networks address: 192.168.20.0/24 gateway: 192.168.20.1 netmask: 24 dns servers: 8.8.8.8, 8.8.4.4
-        5. tambahkan dhcp server (klik tombol +) name: dhcp-lan interface: bridge-lan lease time: 1d 00:00:00 (1 hari) address pool: dhcp-pool-lan
-        6. tambahkan ip firewall - nat chain: srcnat out. interface: ether1 tab action → action: masquerade
-        7. tambahkan dns ip → dns servers: 8.8.8.8, 8.8.4.4 allow remote requests: ✅ (centang)
+  + buatkan bridge lan 2 sampai 4 gabungkan (klik menu bridge → klik tab bridge → klik tombol + → name: bridge-lan → masukkan ether2 ke bridge → klik tab ports → interface: ether2 → bridge: bridge-lan)
+  + tambahkan ip - dhcp client - pastikan bound
+  + tambahkan ip address 192.168.20.1/24 di interfaces bridge-lan
+  + tambahkan ip pool name: dhcp-pool-lanaddresses: 192.168.20.100-192.168.20.200
+  + tambahkan dhcp server klik tab networks address: 192.168.20.0/24 gateway: 192.168.20.1 netmask: 24 dns servers: 8.8.8.8, 8.8.4.4
+  + tambahkan dhcp server (klik tombol +) name: dhcp-lan interface: bridge-lan lease time: 1d 00:00:00 (1 hari) address pool: dhcp-pool-lan
+  + tambahkan ip firewall - nat chain: srcnat out. interface: ether1 tab action → action: masquerade
+  + tambahkan dns ip → dns servers: 8.8.8.8, 8.8.4.4 allow remote requests: ✅ (centang)
         
 B. SETTING AGAR BISA TERHUBUNG KE SERVER CHR 
    - TAMBAHKAN L2TP CLIENT DI TAB PPP (
