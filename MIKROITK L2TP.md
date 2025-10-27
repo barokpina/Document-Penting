@@ -10,42 +10,11 @@ A. SETTING AGAR BISA INTERNET DAN DI BRIGDE LAN NYA
   8. tambahkan dns ip → dns servers: 8.8.8.8, 8.8.4.4 allow remote requests: ✅ (centang)
         
 B. SETTING AGAR BISA TERHUBUNG KE SERVER CHR 
-   - TAMBAHKAN L2TP CLIENT DI TAB PPP (
-        + Klik menu PPP
-        + Klik tab Interface
-        + Klik tombol + → pilih L2TP Client
-        + Tab General:
-        + Name: l2tp-to-chr        
-        + Tab Dial Out:
-        + Connect To: 91.192.81.98 (IP publik CHR server)
-        + User: [username Anda] (contoh: 102-utama, A872, client-3)
-        + Password: [password Anda] 1125toki
-        + Use IPsec: ✅ (centang)
-        + IPsec Secret: 1125toki (harus sama dengan server)
-        + Add Default Route: no (jangan centang)
-  )
-   - Enable Logging (untuk troubleshooting)
-        + Klik menu System → Logging
-        + Klik tombol +
-        + Isi:
-        + Topics: centang l2tp, ipsec, ppp, info
-        + Action: memory
-        + Klik OK
+   1. TAMBAHKAN L2TP CLIENT DI TAB PPP → Klik menu PPP → Klik tab Interface → Klik tombol → pilih L2TP Client  → Tab General  → Name: l2tp-to-chr → Tab Dial Out → Connect To: 91.192.81.98 (IP publik CHR server) → User: [username Anda] (contoh: 102-utama, A872, client-3)  → Password: [password Anda] 1125toki → Use IPsec: ✅ (centang)  → IPsec Secret: 1125toki (harus sama dengan server) → Add Default Route: no (jangan centang)              
+     
+   2. Enable Logging (untuk troubleshooting) : Klik menu System → Logging Klik tombol → Isi: Topics: centang l2tp, ipsec, ppp, infoAction: memory Klik OK
     
-   - Firewall Allow L2TP/IPsec
-        Rule 1: Allow UDP Port L2TP/IPsec
-        + Klik menu IP → Firewall
-        + Klik tab Filter Rules
-        + Klik tombol +
-        + Tab General:
-        + Chain: input
-        + Protocol: udp
-        + Dst. Port: 500,4500,1701
-        + Tab Action:
-        + Action: accept
-        + Tab Comment:
-        + Comment: Allow L2TP/IPsec
-        + Klik OK
+   3. Firewall Allow L2TP/IPsec → Rule 1: Allow UDP Port L2TP/IPsec Klik menu IP → Firewall Klik tab Filter Rules Klik tombol → Tab General: Chain: input Protocol: udp Dst. Port: 500,4500,1701 Tab Action: Action: accept Tab Comment: Comment: Allow L2TP/IPsec Klik OK
     
         Rule 2: Allow IPsec ESP Protocol
         + Klik tombol +
