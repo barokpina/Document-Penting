@@ -1,16 +1,15 @@
 SETTING SISI CLIENT 
-1. SETTING AGAR BISA INTERNET DAN DI BRIGDE LAN NYA
-   - SETTING DHCP CLIENT DAN PASITKAN BOUND
-   - BUATKAN BRIGDE LAN 2 SAMPAI 4 GABUNGKAN ( Klik menu Bridge, Klik tab Bridge Klik tombol + , Name: bridge-lan Masukkan ether2 ke Bridge Klik tab Ports Interface: ether2 Bridge: bridge-lan.
-   - TAMBAHKAN IP ADDRESS 192.168.20.1/24 DI INTERFACES BRIDGE LAN
-   - TAMBAHKAN IP POOL ( NAME : dhcp-pool-lan , Addresses: 192.168.20.100-192.168.20.200 )
-   - TAMBAHKAN DHCP SERVER - Klik tab Networks (Address: 192.168.20.0/24 , Gateway: 192.168.20.1, Netmask: 24, DNS Servers: 8.8.8.8,8.8.4.4
-   - TAMBAHKAN DHCP SERVER KLIK TOMBOL + (Name: dhcp-lan, Interface: bridge-lan , Lease Time: 1d 00:00:00 (1 hari), Address Pool: dhcp-pool-lan)
-   - TAMBAHKAN IP FIREWALL - NAT (Chain: srcnat, Out. Interface: ether1 , Tab Action: Action: masquerade)
-   - TAMBAHKAN DNS (IP - DNS - Servers: 8.8.8.8, 8.8.4.4 , Allow Remote Requests: ✅ (centang)
-
-
-2. SETTING AGAR BISA TERHUBUNG KE SERVER CHR 
+A. SETTING AGAR BISA INTERNET DAN DI BRIGDE LAN NYA
+        1. buatkan bridge lan 2 sampai 4 gabungkan (klik menu bridge → klik tab bridge → klik tombol + → name: bridge-lan → masukkan ether2 ke bridge → klik tab ports → interface: ether2 → bridge: bridge-lan)
+        2. tambahkan ip - dhcp client - pastikan bound
+        2. tambahkan ip address 192.168.20.1/24 di interfaces bridge-lan
+        3. tambahkan ip pool name: dhcp-pool-lanaddresses: 192.168.20.100-192.168.20.200
+        4. tambahkan dhcp server klik tab networks address: 192.168.20.0/24 gateway: 192.168.20.1 netmask: 24 dns servers: 8.8.8.8, 8.8.4.4
+        5. tambahkan dhcp server (klik tombol +) name: dhcp-lan interface: bridge-lan lease time: 1d 00:00:00 (1 hari) address pool: dhcp-pool-lan
+        6. tambahkan ip firewall - nat chain: srcnat out. interface: ether1 tab action → action: masquerade
+        7. tambahkan dns ip → dns servers: 8.8.8.8, 8.8.4.4 allow remote requests: ✅ (centang)
+        
+B. SETTING AGAR BISA TERHUBUNG KE SERVER CHR 
    - TAMBAHKAN L2TP CLIENT DI TAB PPP (
         + Klik menu PPP
         + Klik tab Interface
