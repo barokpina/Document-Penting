@@ -28,3 +28,8 @@
  1. Klik menu IP → Routes Klik tombol → Tab General: Dst. Address: 192.168.10.0/24 Gateway: 10.10.10.10 Tab Advanced: (biarkan default) → Tab Comment:Comment: to  102-utama LAN
  2. dan bagitu juga client 1 2 dan 3 seterus nya.
 
+
+## E. RULE 1: Allow Established & Related Connections
+1. **Allow Established & Related Connections** Via Winbox: → Klik tombol + Tab General:Chain: → input Connection State: → centang established dan relatedTab Action:Action: accept → Tab Comment:Comment: Accept established/related
+2. **Fungsi: Client bisa mengirim L2TP control packet.** Via Winbox:Klik tombol + Tab General:Chain:  → inputProtocol: udpDst. → Port: 1701  → Tab Action:Action: accept  → Tab Comment:Comment: Allow L2TP  → Klik OK
+ 
