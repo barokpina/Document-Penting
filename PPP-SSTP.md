@@ -13,4 +13,6 @@ Sisi Client masing- masing kota
 2. buat EOIP = (name: eoip-cctv - local adress: 172.16.1.2 remote adress: 172.16.1.1 - tunnerl id : 1976 ( samain kayak di server) - klik OK
 3. buat bridge
 4. tambahkan port bridge : (interface: eopip-cctv dan eth3 yang masuk ke dvr nya)
+5. tambahkan ip adress untuk lan lokal khusus server yang akan menampilkan cctv (/ip route add dst-address=192.168.3.0/24 gateway=192.168.4.1
+)
 
