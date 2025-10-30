@@ -8,6 +8,9 @@ remote adress : 172.16.1.2 ) -> buatkan juga untuk kotaB ( Remote Adress : 172.1
 6. buat ip adress = (IP - adresess - klik + - adresss : 192.168.3.1/24 - interface: br-cctv)
 
 
-Sis Client masing- masing kota 
-1. buat SSTP = dial out : connect to : ip public nya - user : .... password nya : .... -> sesuai dibuat screet - ok
-2. 
+Sisi Client masing- masing kota 
+1. buat SSTP = dial out : connect to : ip public nya - user : (sesuai vpn) password nya : (sesuai vpn) -> sesuai dibuat screet - ok
+2. buat EOIP = (name: eoip-cctv - local adress: 172.16.1.2 remote adress: 172.16.1.1 - tunnerl id : 1976 ( samain kayak di server) - klik OK
+3. buat bridge
+4. tambahkan port bridge : (interface: eopip-cctv dan eth3 yang masuk ke dvr nya)
+
