@@ -7,14 +7,15 @@ install ektension vscode = javascript anda typescript - node.js modules intelese
 3. folder utama app = untuk membuat halaman apapun -> dengan membuat folder nama halaman nya dan baut page.tsx (cth : folder = Home , page.tsx )
 
 contoh : buat folder -> Posts -> buat file page.tsx isintya = 
-``const Posts = () = {
+```
+const Posts = () = {
 return (
 )
 <div>
   <h1> POSTINGAN PAGE </h1>
 </div>
 }
-
-export default Posts``
+export default Posts
+```
    
 
