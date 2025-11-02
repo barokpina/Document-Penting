@@ -8,7 +8,8 @@ install ektension vscode = javascript anda typescript - node.js modules intelese
 
 contoh : buat folder -> Posts -> buat file page.tsx isintya = 
 ```
-import Link from "next/Link"
+
+import Link from "next/Link" #penghanti Href adalah Link di nex js 
 
 const Posts = () = {
 return (
@@ -20,10 +21,12 @@ return (
 }
 export default Posts
 ```
-
+```
+'use client'  #wajib menggunakan ini karena ini client side dimasukan di folder component 
+```
 4. pastikan membuka inspec element : klik kanan di browser inspec element dan buka tab network dan lihat resorce nya
 5. bagian syles css = bisa menggunkana global.css -> untuk styling css secara global lebih untuk kayak navigasi, side bar.
-6. menambahan module css di folder halamanya = contoh : postPage.modules.css yang isinya sama kayak css -> dan tambahkan  (import styles from "./postPage.module.css"
+6. menambahan module css di folder halamanya = contoh : postPage.modules.css yang isinya sama kayak css -> dan tambahkan  (import styles from "./postPage.module.css" - lebih enak lgsg tailwind
 7. 
    
 
