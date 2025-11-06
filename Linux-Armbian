@@ -1,0 +1,30 @@
+Tahap 1 (Install zerotier di Armbian)
+1. sudo apt update 
+2. curl -s https://install.zerotier.com | sudo bash
+3. sudo systemctl enable zerotier-one
+4. sudo systemctl start zerotier-one
+5. sudo zerotier-cli join 65228d8d6d9c0775 
+6. sudo zerotier-cli leave bb720a5aae7ddb08 
+7. sudo zerotier-cli listnetworks
+
+Tahap 2 (Cek ip jaringan lokal di STB)
+1. ip addr ( ini cek ip yang di Lokasi yg mau di pasang )
+2. sudo ip route add 192.168.0.0/24 dev eth0 ( ini buat IP terhubung ke cctv nya atau ambil jaringan lokal STB ini )
+3. Edit file : ( sudo nano /etc/sysctl.conf ) temukan baris berikut:
+#net.ipv4.ip_forward=1  
+Hapus tanda komentar (#) sehingga menjadi:
+net.ipv4.ip_forward=1
+simpan perubahan, lalu jalankan perintah berikut untuk mengaktifkan IP forwarding tanpa restart: CTRl X dan Save dan enter
+Jalankan : sudo sysctl -p
+
+Tahap 3 ( Setting keamanan firewall di STB)
+1. sudo apt install iptables
+2. sudo iptables -A FORWARD -i zt+ -o eth0 -j ACCEPT
+3. sudo iptables -A FORWARD -i eth0 -o zt+ -j ACCEPT
+4. sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+5. Jalankan : sudo chmod +x /etc/rc.local
+
+Tahap 4 (akhir – Koneksi kan ke Windows )
+1.Buka cmd administrator di windows
+2. route add 192.168.0.0 mask 255.255.255.0 172.23.177.70
+3. route delete 192.168.0.0
