@@ -5,8 +5,11 @@ Sisi Server CHR nya :
     /ip pool add name=vpn-pool ranges=10.10.10.2-10.10.10.254
     /ppp profile add name=vpn-profile local-address=10.10.10.1 remote-address=vpn-pool
     ```
-3. buat scret nya = ( PPP - screts - name : kotaA - password : bebas - local adress : 172.16.1.1 -
+3. buat scret nya = ( 
+```
+PPP - screts - name : kotaA - password : bebas - local adress : 172.16.1.1 -
 remote adress : 172.16.1.2 ) -> buatkan juga untuk kotaB ( Remote Adress : 172.16.1.3 - sisanya sama)
+```
 4. buat EOIP Tunnel = (name : eoip-cctv-kotaA - local adress: 172.16.1.1 - remote adress: 172.16.1.2 - tunnl id: 1976) - buatkan juga untuk kotaB - dengan remote adress : sesuaikan dan Tunnel id harus beda juga.
 5. buat bridge = (buka bidge - klik + dan buat nama : br-cctv)
 6. Masukan port ke bridge = (klik tab port - klik + masukan interface : dari EOIP yg dibuat sebelum nya )
