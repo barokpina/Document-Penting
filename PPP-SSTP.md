@@ -1,18 +1,28 @@
-Sisi Server CHR nya : 
-1. buat SSTP = (PPP - SSTP SERVER - enable )
+### Sisi Server CHR nya : 
+1. buat SSTP atau L2TP= 
+(PPP - SSTP SERVER - enable )
 
-2. buat scret nya = (PPP - screts - name : kotaA - password : bebas - local adress : 10.10.10.1 -
-remote adress : 10.10.10.2 ) -> buatkan juga untuk kotaB ( Remote Adress : 10.10.10.3- sisanya sama)
+2. buat scret nya = 
+(PPP - screts :
+name : kotaA 
+password : bebas 
+local adress : 10.10.10.1 -
+remote adress : 10.10.10.2) 
+note : buatkan juga untuk kotaB ( Remote Adress : 10.10.10.3- sisanya sama)
 
-3. buat ip adress = (IP - adresess - klik + - adresss : 10.10.40.1/24 - interface: br-cctv)
+3. buat ip adress = 
+(IP - adresess - klik + - adresss : 10.10.40.1/24 - interface: br-cctv)
 
 
-4. Buat Routes nya : ( IP - Routes - tambah - dst adress 10.10.20.0/24 gateway 10.10.10.2 ) tambah satu lagi 10.10.30.0/24 gateway 10.10.10.3
+4. Buat Routes nya : 
+(IP - Routes - tambah : 
+dst adress 10.10.20.0/24 
+gateway 10.10.10.2) 
+note : semua client masukin kesini
 
 
 
-
-Sisi Client masing- masing kota 
+### Sisi Client masing- masing kota 
 1. buat SSTP = dial out : connect to : ip public nya - user : (sesuai vpn) password nya : (sesuai vpn) -> sesuai dibuat screet - ok
 
 3. buat bridge
