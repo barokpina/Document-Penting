@@ -3,7 +3,7 @@
 (PPP - SSTP SERVER - enable )
 
 2. buat scret nya = 
-(PPP - screts :
+- PPP - screts +
 - name : kotaA 
 - password : bebas 
 - local adress : 10.10.10.1 -
@@ -11,14 +11,17 @@
 - note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
 
 3. buat ip adress = 
-(IP - adresess - klik + - adresss : 10.10.40.1/24 - interface: br-cctv)
+- IP - adresess - 
+- klik + 
+- adresss : 10.10.40.1/24 
+- interface: br-cctv)
 
 
 4. Buat Routes nya : 
-(IP - Routes - tambah : 
-dst adress 10.10.20.0/24 
-gateway 10.10.10.2) 
-note : semua client masukin kesini
+- IP - Routes - tambah : 
+- dst adress 10.10.20.0/24 
+- gateway 10.10.10.2) 
+- note : semua client masukin kesini
 
 
 
