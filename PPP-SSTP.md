@@ -4,11 +4,11 @@
 
 2. buat scret nya = 
 (PPP - screts :
-name : kotaA 
-password : bebas 
-local adress : 10.10.10.1 -
-remote adress : 10.10.10.2) 
-note : buatkan juga untuk kotaB ( Remote Adress : 10.10.10.3- sisanya sama)
+- name : kotaA 
+- password : bebas 
+- local adress : 10.10.10.1 -
+- remote adress : 10.10.10.2) 
+- note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
 
 3. buat ip adress = 
 (IP - adresess - klik + - adresss : 10.10.40.1/24 - interface: br-cctv)
