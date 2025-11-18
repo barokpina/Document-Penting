@@ -12,36 +12,37 @@
 6. note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
 
 
-3. buat ip adress = 
-- IP - adresess - 
-- klik + 
-- adresss : 10.10.40.1/24 
-- interface: br-cctv)
+- buat ip adress = 
+1. IP - adresess - 
+2. klik + 
+3. adresss : 10.10.40.1/24 
+4. interface: br-cctv)
 
 
 
-4. Buat Routes nya : 
-- IP - Routes - tambah : 
-- dst adress 10.10.20.0/24 
-- gateway 10.10.10.2) 
-- note : semua client masukin kesini
+- Buat Routes nya : 
+1. IP - Routes - tambah : 
+2. dst adress 10.10.20.0/24 
+3. gateway 10.10.10.2) 
+4. note : semua client masukin kesini
 
 
 
 ### Sisi Client masing- masing kota 
-1. buat SSTP = dial out : connect to : ip public nya - user : (sesuai vpn) password nya : (sesuai vpn) -> sesuai dibuat screet - ok
+- buat SSTP atau L2TP = 
+1. dial out : connect to : 
+2. ip public nya - user : (sesuai vpn) 
+3. password nya : (sesuai vpn) -> 
+4. sesuai dibuat screet - ok
 
-3. buat bridge
+- buat bridge
+1. tambahkan port bridge : semua eth 2 - 5
 
-4. tambahkan port bridge : (interface: eopip-cctv dan eth3 yang masuk ke dvr nya)
-
-5. buat dhcp client dan ip - firewall - natt - masquarede dan output eth1
-
-6. tambahkan ip adress untuk lan lokal khusus server yang akan menampilkan cctv
-
-7. tambahkan Dchp server (harus buat IP pool dulu ) - network - dan IP pool
-
-8. tambahkan IP route - dst adress 10.10.20.0/24 gateway 10.10.10.1 (jika mau tembak IP yg di tuju adalah 10.10.20.1)
+- buat dhcp client dan 
+- ip - firewall - natt - masquarede dan output eth1
+- tambahkan ip adress untuk lan lokal khusus server yang akan menampilkan cctv
+- tambahkan Dchp server (harus buat IP pool dulu ) - network - dan IP pool
+- tambahkan IP route - dst adress 10.10.20.0/24 gateway 10.10.10.1 (jika mau tembak IP yg di tuju adalah 10.10.20.1)
 
 
 
