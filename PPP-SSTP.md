@@ -12,8 +12,8 @@
 6. note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
 
 
-- buat ip adress = 
-1. IP - adresess - 
+- buat ip adress :  
+1. IP - adresess :
 2. klik + 
 3. adresss : 10.10.40.1/24 
 4. interface: br-cctv)
