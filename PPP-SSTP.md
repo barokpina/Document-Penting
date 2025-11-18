@@ -1,15 +1,15 @@
 ### Sisi Server CHR nya : 
-1. buat SSTP atau L2TP = 
-- PPP - SSTP SERVER - enable )
+- buat SSTP atau L2TP = 
+1. PPP - SSTP SERVER - enable )
 
 
-2. buat scret nya = 
-- PPP - screts +
-- name : kotaA 
-- password : bebas 
-- local adress : 10.10.10.1 -
-- remote adress : 10.10.10.2) 
-- note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
+- buat scret nya = 
+1. PPP - screts +
+2. name : kotaA 
+3. password : bebas 
+4. local adress : 10.10.10.1 -
+5. remote adress : 10.10.10.2) 
+6. note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
 
 
 3. buat ip adress = 
