@@ -12,7 +12,7 @@
 6. note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
 
 
-- buat ip adress :  
+- buat ip adress (opsional):  
 1. IP - adresess :
 2. klik + 
 3. adresss : 10.10.40.1/24 
