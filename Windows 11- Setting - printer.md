@@ -8,3 +8,28 @@
 3. Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print ( klik kanan - 32 bit - RpcAuthnLevelPrivacyEnabled )
 
 4. windows - services - print sooler - restart 
+
+
+
+```
+@echo off
+echo ======================================
+echo Setting Printer RPC Registry...
+echo ======================================
+
+:: Buat key jika belum ada
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" /f
+
+:: Tambah DWORD RpcOverTcp = 1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" ^
+ /v RpcOverTcp /t REG_DWORD /d 1 /f
+
+:: Tambah DWORD RpcOverNamedPipes = 1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" ^
+ /v RpcOverNamedPipes /t REG_DWORD /d 1 /f
+
+echo.
+echo Registry berhasil ditambahkan.
+echo Silakan restart komputer atau service Print Spooler.
+pause
+```
