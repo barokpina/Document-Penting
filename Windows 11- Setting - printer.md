@@ -11,6 +11,9 @@
 
 
 
+
+batch no. 1
+
 ```
 @echo off
 echo ======================================
@@ -32,4 +35,55 @@ echo.
 echo Registry berhasil ditambahkan.
 echo Silakan restart komputer atau service Print Spooler.
 pause
+```
+
+
+batch no 2.
+```
+@echo off
+echo ==========================================
+echo SET FULL PERMISSION REGISTRY (HKCU)
+echo ==========================================
+
+:: Pastikan dijalankan sebagai user yang aktif
+echo Mengatur Full Control untuk Current User...
+echo.
+
+powershell -Command ^
+"$key='HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Windows';" ^
+"$user=[System.Security.Principal.WindowsIdentity]::GetCurrent().Name;" ^
+"$acl=Get-Acl $key;" ^
+"$rule=New-Object System.Security.AccessControl.RegistryAccessRule($user,'FullControl','ContainerInherit,ObjectInherit','None','Allow');" ^
+"$acl.SetAccessRule($rule);" ^
+"Set-Acl $key $acl;"
+
+echo.
+echo ==========================================
+echo PERMISSION BERHASIL DIBERIKAN
+echo ==========================================
+pause
+```
+
+
+
+batch no 3. 
+
+```
+@echo off
+echo ======================================
+echo Setting Print RPC Registry...
+echo ======================================
+
+:: Pastikan dijalankan sebagai Administrator
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Print" ^
+ /v RpcAuthnLevelPrivacyEnabled ^
+ /t REG_DWORD ^
+ /d 0 ^
+ /f
+
+echo.
+echo Registry RpcAuthnLevelPrivacyEnabled berhasil ditambahkan.
+echo Silakan restart komputer atau service Print Spooler.
+pause
+
 ```
