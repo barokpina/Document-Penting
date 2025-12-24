@@ -45,7 +45,7 @@ composer global require laravel/installer
 
 laravel new example-app
 ```
-2. Koneksi di Mysql 
+2. Koneksi di Mysql di Env 
 
 ```
 DB_CONNECTION=mysql
@@ -72,5 +72,22 @@ public function up()
         $table->integer('price');
         $table->timestamps();
     });
+}
+```
+
+```
+php artisan migrate
+```
+
+5. Buat Model 
+```
+php artisan make:model Product
+```
+
+6. Buka model nya 
+```
+class Product extends Model
+{
+    protected $fillable = ['name', 'price'];
 }
 ```
