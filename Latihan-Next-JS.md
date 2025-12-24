@@ -91,3 +91,48 @@ class Product extends Model
     protected $fillable = ['name', 'price'];
 }
 ```
+7. Buat controller ApI
+```
+php artisan make:controller ProductController
+```
+8. Buka Control ApI nya 
+```
+use App\Models\Product;
+use Illuminate\Http\Request;
+
+class ProductController extends Controller
+{
+    // CREATE
+    public function store(Request $request)
+    {
+        $product = Product::create([
+            'name' => $request->name,
+            'price' => $request->price
+        ]);
+
+        return response()->json($product);
+    }
+
+    // READ
+    public function index()
+    {
+        return response()->json(Product::all());
+    }
+
+    // UPDATE
+    public function update(Request $request, $id)
+    {
+        $product = Product::find($id);
+        $product->update($request->all());
+
+        return response()->json($product);
+    }
+
+    // DELETE
+    public function destroy($id)
+    {
+        Product::destroy($id);
+        return response()->json(['message' => 'Deleted']);
+    }
+}
+```
