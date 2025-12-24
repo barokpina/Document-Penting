@@ -34,32 +34,40 @@
 
 ### Sisi Client masing- masing kota 
 - koneksikan SSTP atau L2TP - L2TP client
+```
 1. dial out - connect to : 
 2. ip public nya - user : (sesuai vpn) 
 3. password nya : (sesuai vpn) -> 
 4. sesuai dibuat screet - ok
-
+```
 - buat bridge
+```
 1. tambahkan port bridge : semua eth 2 - 5
+```
 
 - buat dhcp client
-
+```
 - ip - firewall - natt - masquarede dan output eth1
 - tambahkan ip adress : 
 1. IP adress : 10.10.20.1
 2. interface: bridge1
+```
 
-- tambahkan IP pool : 
+- tambahkan IP pool :
+```
 1. adress : 10.10.20.10-10.10.20.200
+```
 
-- tambahkan Dchp server 
+- tambahkan Dchp server
+```
 1.Dhcp server - pilihan interface: IP poo
 2.Network : adresss : 10.10.20.0/24 - DNS : 8.8.8. Dan 8.8.4.4
-
-- tambahkan IP route : 
+```
+- tambahkan IP route :
+```
 1. dst adress 10.10.20.0/24
 2. gateway 10.10.10.1 
 3. note : (jika mau tembak IP yg di tuju adalah 10.10.20.1)
-
+```
 
 
