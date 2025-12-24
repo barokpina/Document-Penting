@@ -1,31 +1,35 @@
 ### Sisi Server CHR nya : 
-- buat SSTP atau L2TP = 
+- buat SSTP atau L2TP =
+```
 1. PPP - SSTP SERVER - enable (tanpa aktifkan IP sec)
+```
 
-
-- buat scret nya = 
+- buat scret nya =
+```
 1. PPP - screts +
 2. name : kotaA 
 3. password : bebas 
 4. local adress : 10.10.10.1 -
 5. remote adress : 10.10.10.2) 
 6. note : buatkan juga untuk kotaB ( Remote - Adress : 10.10.10.3- sisanya sama)
+```
 
-
-- buat ip adress (opsional):  
+- buat ip adress (opsional):
+```
 1. IP - adresess :
 2. klik + 
 3. adresss : 10.10.40.1/24 
 4. interface: br-cctv)
+```
 
 
-
-- Buat Routes nya : 
+- Buat Routes nya : ( ini Wajib Semua Route masuk kesini)
+```
 1. IP - Routes - tambah : 
 2. dst adress 10.10.20.0/24 
 3. gateway 10.10.10.2) 
 4. note : semua client masukin kesini
-
+```
 
 
 ### Sisi Client masing- masing kota 
