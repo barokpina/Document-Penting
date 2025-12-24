@@ -136,3 +136,74 @@ class ProductController extends Controller
     }
 }
 ```
+9. Buat Route API 
+```
+use App\Http\Controllers\ProductController;
+
+Route::get('/products', [ProductController::class, 'index']);
+Route::post('/products', [ProductController::class, 'store']);
+Route::put('/products/{id}', [ProductController::class, 'update']);
+Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+```
+10. Bagian Front Enda 
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD JS + Laravel</title>
+</head>
+<body>
+
+<h2>Tambah Produk</h2>
+
+<input type="text" id="name" placeholder="Nama Produk">
+<input type="number" id="price" placeholder="Harga">
+<button onclick="save()">Simpan</button>
+
+<h2>Data Produk</h2>
+<ul id="list"></ul>
+
+<script>
+const API = "http://127.0.0.1:8000/api/products";
+
+function save() {
+    fetch(API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            name: document.getElementById('name').value,
+            price: document.getElementById('price').value
+        })
+    })
+    .then(res => res.json())
+    .then(() => load());
+}
+
+function load() {
+    fetch(API)
+    .then(res => res.json())
+    .then(data => {
+        let html = "";
+        data.forEach(p => {
+            html += `<li>
+                ${p.name} - ${p.price}
+                <button onclick="del(${p.id})">Hapus</button>
+            </li>`;
+        });
+        document.getElementById('list').innerHTML = html;
+    });
+}
+
+function del(id) {
+    fetch(API + '/' + id, { method: 'DELETE' })
+    .then(() => load());
+}
+
+load();
+</script>
+
+</body>
+</html>
+
+```
