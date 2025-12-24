@@ -45,4 +45,32 @@ composer global require laravel/installer
 
 laravel new example-app
 ```
+2. Koneksi di Mysql 
 
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_crud_js
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+3. Buat Table Database 
+
+```
+php artisan make:migration create_products_table
+```
+
+4. Buka Produk Tabel 
+```
+public function up()
+{
+    Schema::create('products', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->integer('price');
+        $table->timestamps();
+    });
+}
+```
