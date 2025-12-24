@@ -1,4 +1,4 @@
-install ektension vscode = javascript anda typescript - node.js modules intelesense - es7+
+ini install ektension vscode = javascript anda typescript - node.js modules intelesense - es7+
 
 
 ## install dan informasi 
@@ -29,4 +29,20 @@ export default Posts
 6. menambahan module css di folder halamanya = contoh : postPage.modules.css yang isinya sama kayak css -> dan tambahkan  (import styles from "./postPage.module.css" - lebih enak lgsg tailwind
 7. 
    
+
+
+
+
+
+###Laravel 
+
+1. instalasi laravel terbaru 
+- download composer 
+- download node.js
+
+```
+composer global require laravel/installer
+
+laravel new example-app
+```
 
