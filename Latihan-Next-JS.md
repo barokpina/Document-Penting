@@ -34,7 +34,7 @@ export default Posts
 
 
 
-###Laravel 
+## Laravel 
 
 1. instalasi laravel terbaru 
 - download composer 
