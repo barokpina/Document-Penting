@@ -131,6 +131,7 @@ void loop() {
         GND → G
 
 3. Download aplikasi IoT MQTT panel
+
    Add Connection : 
      - connection name = bebas namanya
      - Clint Id = bebas ada id nya
