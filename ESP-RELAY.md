@@ -121,3 +121,29 @@ void loop() {
   }
 }
 ```
+
+2. Skema 
+- Arduino ESP8266
+- Relay Songle SRD-05VDC
+   Relay dan Esp pin:
+        IN → D1
+        VCC → VIN
+        GND → G
+
+3. Download aplikasi IoT MQTT panel
+   Add Connection : 
+     - connection name = bebas namanya
+     - Clint Id = bebas ada id nya
+     - Broker Adress = broker.hivemq.com
+     - port = 1883
+     - network protokol = TCP
+     SAVE 
+
+   Add Button : 
+     - Panel name = RESTART
+     - topic = watchdog/relay/cmd
+     - payload = RESTART
+       SISANYA DEFAULT 
+   
+
+
